@@ -9,7 +9,8 @@
   },
   "scripts": {
     "build": "browserify lib/main.js -o dist/main-temp.js -d",
-    "postbuild": "terser --output dist/main.js -- dist/main-temp.js"
+    "postbuild": "terser --output dist/main.js -- dist/main-temp.js",
+    "start": "npm run build && ws"
   },
   "keywords": [],
   "browserify": {
@@ -25,19 +26,20 @@
     ]
   },
   "dependencies": {
-    "@aws-sdk/client-cognito-identity": "^3.223.0",
-    "@aws-sdk/eventstream-marshaller": "^3.120.0",
-    "@aws-sdk/util-utf8-node": "^3.208.0",
-    "aws-sdk": "^2.1267.0",
-    "browserify": "^16.5.2",
-    "local-web-server": "^3.0.7",
-    "microphone-stream": "^5.3.1",
-    "query-string": "^6.14.1",
-    "terser": "^5.16.1"
+    "@aws-sdk/client-cognito-identity": "3.303.0",
+    "@aws-sdk/eventstream-marshaller": "3.120.0",
+    "@aws-sdk/util-utf8-node": "3.259.0",
+    "aws-sdk": "2.1348.0",
+    "browserify": "17.0.0",
+    "microphone-stream": "6.0.1",
+    "query-string": "7.1.3",
+    "terser": "5.16.8",
+    "crypto": "1.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@babel/preset-env": "^7.20.2",
-    "babelify": "^10.0.0"
+    "babelify": "^10.0.0",
+    "local-web-server": "5.3.0"
   }
 }

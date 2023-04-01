@@ -1,8 +1,9 @@
-node_modules
-dist/main-temp.js
-build
-npm-debug.log
-.env
+.idea/
+build/
+dist/
+node_modules/
 .DS_Store
-z-config.js
+.env
 config.js
+npm-debug.log
+z-config.js
